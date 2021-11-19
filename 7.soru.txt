@@ -1,0 +1,40 @@
+7.SORU İÇ İÇE FORDÖNGÜSÜ İLE KILIÇ VE SIRA DAĞLAR OLUŞTURMA 
+PROGRAMI YAZINIZ?
+Console.WriteLine(" ");
+int a, b;
+Console.WriteLine(" ");
+Console.WriteLine(" /\\ ");
+for (a = 1; a <= 4; a++)
+{
+for (b = 2; b <= a; b++)
+{
+Console.WriteLine(" ||");
+}
+}
+Console.WriteLine(" ◄ ▄▄▄▄ ►");
+Console.WriteLine(" ||");
+Console.WriteLine(" ||");
+Console.WriteLine(" \\/");
+Console.WriteLine(" ");
+Console.WriteLine(" ");
+Console.WriteLine(" ");
+int satir = 10;
+for(int z = 1; z <= 5; z++)
+{
+for(int i =1;i<=satir;i++)
+{
+for(int k = 1; k <= i; k++)
+{
+Console.Write("*");
+}
+Console.WriteLine();
+}
+for(int f=1;f<=satir;f++)
+{
+for (int j =f; j<=10;j++)
+{
+Console.Write("*");
+}
+Console.WriteLine("");
+}
+}
