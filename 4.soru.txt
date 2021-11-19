@@ -1,0 +1,45 @@
+SORU 4: GİRİLEN METİN İLE İLGİLİ SORULARI BİLEN PROGRAMI YAZINIZ?
+Console.WriteLine("Lütfen bir metin giriniz");
+string metin = Console.ReadLine( );
+Console.WriteLine("Metinin içinde şu harf varmı ? Evet/Hayır ");
+string harf = Console.ReadLine();
+bool ara = metin.Contains(harf);
+switch (ara)
+{
+case true:
+Console.Write("Evet ");
+break;
+case false:
+Console.WriteLine("Hayır ");
+break;
+}
+if (metin.IndexOf(harf) + 1 != 0)
+{
+Console.WriteLine(metin.IndexOf(harf) + 1 + ". sıradadır");
+}
+Console.WriteLine( "Metin şu harflemi başlıyor ? Evet/Hayır");
+string harf2 = Console.ReadLine();
+bool ara2 = metin.StartsWith(harf2);
+switch (ara2)
+{
+case true:
+Console.WriteLine("Evet ");
+break;
+case false:
+Console.WriteLine("Hayır ");
+break;
+}
+Console.WriteLine("Metin şu harflemi bitiyor ? Evet/Hayır");
+string harf3 = Console.ReadLine();
+bool ara3 = metin.EndsWith(harf3);
+switch (ara3)
+{
+case true:
+Console.WriteLine("Evet ");
+break;
+case false:
+Console.WriteLine("Hayır ");
+break;
+}
+Console.WriteLine("metniniz "+ metin.Length +" karakter uzunluğundadır NOT( Boşluklarıda Değer Olarak 
+Sayar )");
