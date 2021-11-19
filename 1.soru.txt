@@ -1,0 +1,55 @@
+1.SORU = 3 HANELİ ŞİFREYİ TAHMİN ETME PROGRAMI YAZINIZ ?
+int[,] dizi = new int[3, 2];
+dizi[0, 0] = 1;
+dizi[0, 1] = 2;
+dizi[1, 0] = 3;
+dizi[1, 1] = 4;
+dizi[2, 0] = 5;
+dizi[2, 1] = 6;
+for (int i=0;i<3;i++)
+{
+for(int j=0;j<2;j++)
+{
+Console.Write(" {0} ",dizi[i,j]);
+}
+Console.WriteLine(" ");
+}
+int sifre1= 1 ;
+int sifre2 = 4;
+int sifre3 = 6;
+start:
+Console.WriteLine("Lütfen 1. sıradan seçim yapınız");
+int deneme1 =Convert.ToInt32(Console.ReadLine());
+if (deneme1 != sifre1 )
+{
+Console.WriteLine("YANLIŞ SEÇİM YAPTINIZ TEKRAR DENEYİNİZ");
+goto start;
+}
+else
+{
+Console.WriteLine("DOĞRU SEÇİM YAPTINIZ" );
+}
+start2:
+Console.WriteLine("Lütfen 2. ikinci sıradan seçim yapınız");
+int deneme2 = Convert.ToInt32(Console.ReadLine());
+if (deneme2 != sifre2)
+{
+Console.WriteLine("YANLIŞ SEÇİM YAPTINIZ TEKRAR DENEYİNİZ");
+goto start2;
+}
+else
+{
+Console.WriteLine("DOĞRU SEÇİM YAPTINIZ");
+}
+start3:
+Console.WriteLine("Lütfen 3. sıradan seçim yapınız");
+int deneme3 = Convert.ToInt32(Console.ReadLine());
+if (deneme3 != sifre3)
+{
+Console.WriteLine("YANLIŞ SEÇİM YAPTINIZ TEKRAR DENEYİNİZ");
+goto start3;
+}
+else
+{
+Console.WriteLine("DOĞRU SEÇİM YAPTINIZ TEBRİKLER ŞİFREYİ BULDUNUZ ŞİFRE:1-4-6");
+}
