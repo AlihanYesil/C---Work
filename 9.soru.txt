@@ -1,0 +1,45 @@
+SORU 9: OKU HANGİ ÇEMBERE ATTI TAHMİN OYUNU YAZINIZ?
+Random sans = new Random();
+ int ok;
+ int hak = 3;
+ int oyuncu;
+ int puan = 0;
+ do
+ {
+ ok = sans.Next(1, 5);
+ 
+ Console.WriteLine("[1-2-3-4] Sizce Oku Hangi Kısma Attı Birini Seçin");
+ oyuncu = Convert.ToInt32(Console.ReadLine());
+ if (ok == oyuncu)
+ {
+ Console.WriteLine("Tebrikler Atışı bildiniz +4 PUAN");
+puan = puan +4;
+ }
+ else if (Math.Abs(ok - oyuncu)==1 )
+ {
+ Console.WriteLine("Malesef Bilemediniz YAKIN CEVAP 3+ PUAN");
+ puan = puan +3;
+hak = hak + -1;
+ }
+ 
+ else if (Math.Abs(ok - oyuncu) == 2)
+ {
+ Console.WriteLine("Malesef Bilemediniz YAKIN CEVAP 2+ PUAN");
+ puan = puan + 2;
+hak = hak + -1;
+ }
+ else if (Math.Abs(ok - oyuncu)== 3)
+ {
+ Console.WriteLine("Malesef Bilemediniz UZAK CEVAP 1+ PUAN");
+ puan = puan + 1;
+ hak = hak + -1;
+ }
+ else
+ {
+ Console.WriteLine("Malesef Bilemediniz UZAK CEVAP 0+ PUAN");
+hak = hak + -1;
+ }
+ }
+ while (hak > 0);
+ 
+ Console.WriteLine("Toplam Aldığınız puan:"+puan);
