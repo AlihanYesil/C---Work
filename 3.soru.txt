@@ -1,0 +1,18 @@
+SORU 3: Koninin Taban Alanı , Yanal Alanı, Hacmini ve Tüm Alanını 
+Hesaplayan Program yazınız? NOT (pi değeri 3 olarak alınmıştır)
+const int PI = 3 ;
+double tabanalani, yanalalan, tümalan,hacim,h,r,a;
+Console.Write("lütfen bir yükseklik değeri giriniz: ");
+h = Convert.ToDouble(Console.ReadLine());
+Console.Write("lütfen bir yaricap değeri giriniz: ");
+r = Convert.ToDouble(Console.ReadLine());
+Console.Write("lütfen bir anadoğru değeri giriniz: ");
+a = Convert.ToDouble(Console.ReadLine());
+tabanalani = Math.Pow(r, 2) * PI;
+Console.WriteLine("taban alanı: "+tabanalani);
+yanalalan = PI * r * a;
+Console.WriteLine("yanal alanı: "+yanalalan);
+tümalan = yanalalan + tabanalani;
+Console.WriteLine("tüm alanı: "+tümalan);
+hacim = (tabanalani * h) / 3;
+Console.WriteLine("hacim:"+hacim);
