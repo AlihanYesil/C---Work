@@ -1,0 +1,56 @@
+SORU 5 : İDEAL KİLO HESAPLAMA PROGRAMAMI YAPINIZ?
+Console.WriteLine("Lütfen Boy Giriniz (ÖRN= 172)");
+double boy = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Lütfen kilo Giriniz (ÖRN= 50)");
+double kilo = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Lütfen seçeneklerden birinin Rakam değerini yazın: [1]Erkek-[2]Kadın-
+[3]Sporcu");
+int secenek = Convert.ToInt32(Console.ReadLine());
+double erkek = boy / kilo;
+double kadın = boy / kilo;
+double sporcu = boy / kilo;
+switch (secenek)
+{
+case 1:
+if (erkek >= 2.5)
+{
+Console.WriteLine("ZAYIFSINIZ KİLO ALMALISINIZ");
+}
+else if (erkek <= 1.8)
+{
+Console.WriteLine("FAZLA KİLOLUSUNUZ KİLO VERMELİSİNİZ");
+}
+else
+{
+Console.WriteLine("İDEAL KİLODASINIZ FORMUNUZU KORUYUN");
+}
+break;
+case 2:
+if (kadın >= 2.9)
+{
+Console.WriteLine("ZAYIFSINIZ KİLO ALMALISINIZ");
+}
+else if (kadın <= 2.2)
+{
+Console.WriteLine("FAZLA KİLOLUSUNUZ KİLO VERMELİSİNİZ");
+}
+else
+{
+Console.WriteLine("İDEAL KİLODASINIZ FORMUNUZU KORUYUN");
+}
+break;
+case 3:
+if (sporcu >= 2)
+{
+Console.WriteLine("ZAYIFSINIZ KİLO ALMALISINIZ");
+}
+else if (sporcu <= 1.5)
+{
+Console.WriteLine("FAZLA KİLOLUSUNUZ KİLO VERMELİSİNİZ");
+}
+else
+{
+Console.WriteLine("İDEAL KİLODASINIZ FORMUNUZU KORUYUN");
+}
+break;
+}
