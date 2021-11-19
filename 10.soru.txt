@@ -1,0 +1,70 @@
+soru 10 : Bilgisayar Tarafından Seçilmiş 3 Rengi gösteren Program yazınız?
+(yeşili bulduğunuzda bir hak daha kazanırsınız)
+Random random = new Random();
+int tutulan = random.Next(1 , 4);
+int b = 1;
+while(b<=3)
+{
+Console.WriteLine("3 SEÇİLMİŞ RENK'İ BUL");
+Console.WriteLine("Lütfen Renk'in yanındaki rakamı yazınız [1]-KIRMIZI [2]-MAVİ [3]-YESİL ");
+int renk= Convert.ToInt32(Console.ReadLine());
+if (renk == 1 && tutulan == 1)
+{
+b++;
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("BASLA");
+for (int i = 1; i <= 3; i++)
+{
+Console.WriteLine("KIRMIZI");
+tutulan = random.Next(1, 4);
+if (tutulan == i)
+{
+Console.WriteLine("SEÇİLMİŞ KIRMIZI "+tutulan+".");
+break;
+}
+}
+}
+else if (renk == 2 && tutulan == 2)
+{
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.WriteLine("BASLA");
+b++;
+for (int c = 1; c <= 3; c++)
+{
+Console.WriteLine("MAVİ");
+tutulan = random.Next(1, 4);
+if (tutulan == c)
+{
+Console.WriteLine("SEÇİLMİŞ MAVİ " + tutulan + ".");
+break;
+}
+}
+}
+else if (renk == 3 && tutulan == 3)
+{
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("BASLA");
+int s = 1;
+if (s ==2)
+{
+continue;
+b++;
+}
+s++;
+for (int a = 1; a <= 3; a++)
+{
+Console.WriteLine("YESİL");
+tutulan = random.Next(1, 4);
+if (tutulan == a)
+{
+Console.WriteLine("SEÇİLMİŞ YEŞİL " + tutulan + ".");
+break;
+}
+}
+}
+else if (renk !=tutulan)
+{
+Console.ForegroundColor = ConsoleColor.DarkCyan;
+Console.WriteLine("TEKRAR DENE");
+}
+}
