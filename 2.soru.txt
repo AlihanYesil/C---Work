@@ -1,0 +1,31 @@
+2.soru : [0-3] Arasında sayılardan 2 soru oluşturan yanlış hakkın tahmin 
+oyunu yazınız?
+Console.WriteLine( "[0-3] Arasında sayı oluşturulan tahmin oyunu yanlış hakkın yoktur");
+int deger1,deger2;
+Random tahmin =new Random () ;
+int s1,s2;
+s1 = tahmin.Next(0,4);
+s2 = tahmin.Next(0, 4);
+Console.WriteLine("1.soru: lütfen [0,1,2,3] sayılarından birini giriniz:" );
+deger1 = Convert.ToInt32(Console.ReadLine());
+if (deger1 == s1)
+{
+Console.WriteLine("1.soruyu bildiniz");
+Console.WriteLine(" 2. soru: lütfen [0,1,2,3] sayılarından birini giriniz");
+deger2 = Convert.ToInt32(Console.ReadLine());
+if (deger2 == s2)
+{
+Console.WriteLine("tebrikler oyunu kazandınız");
+}
+else
+{
+Console.WriteLine("2.soruya yanlış cevap verdiniz");
+Console.WriteLine("oyun bitti oynamak için oyunu lütfen tekrar başlatın");
+Console.WriteLine("doğru cevap :" + s2);
+}
+}
+else if (deger1 != s1)
+{
+Console.WriteLine("1.soruya yanlış cevap verdiniz");
+Console.WriteLine("oyun bitti oynamak için oyunu lütfen tekrar başlatın");
+Console.WriteLine("doğru cevap :"+ s1);}
