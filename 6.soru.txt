@@ -1,0 +1,24 @@
+SORU 6: Kırtasiyeden Alınan Ürünü Hesaplayan Programı Yazınız?
+int kalem = 3;
+int defter = 5;
+int silgi = 2;
+Console.WriteLine("Almak istediğiniz ürünün Rakamını Yazdırın ([1]Kalem 3TL -[2]Defter 5TL 
+-[3]Silgi 2TL)");
+int secim = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Kaç Adet Almak istersiniz (1-2-3)");
+int secim2 = Convert.ToInt32(Console.ReadLine());
+switch (secim)
+{
+case 1:
+Console.WriteLine(kalem * secim2 + " TL ÜCRET ÖDEMENİZ GEREKİYOR");
+break;
+case 2:
+Console.WriteLine(defter * secim2 +" TL ÜCRET ÖDEMENİZ GEREKİYOR");
+break;
+case 3:
+Console.WriteLine(silgi * secim2 +" TL ÜCRET ÖDEMENİZ GEREKİYOR");
+break;
+default:
+Console.WriteLine("Hatalı işlem yaptınız lütfen uygulamayı tekrar başlatın");
+break;
+}
