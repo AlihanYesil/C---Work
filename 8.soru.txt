@@ -1,0 +1,28 @@
+8.SORU: WHİLE DÖNGÜSÜ İLE SICAK SOĞUK(TAHMİN) OYUNU YAZINIZ ?
+Random random = new Random();
+int tutulan = random.Next(1, 51);
+int tahmin = 0;
+int tahminsayaci = 0;
+while (tutulan != tahmin)
+{
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write(" Sıcak Soğuk Oyunu Başladı 1-50 Arasında Bir Sayı Giriniz: ");
+tahmin = Convert.ToInt32(Console.ReadLine());
+tahminsayaci = tahminsayaci + 1;
+if (tahmin > tutulan)
+{
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("Soğuk");
+}
+else
+{
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("Sıcak");
+}
+}
+if (tutulan == tahmin)
+{
+Console.ForegroundColor = ConsoleColor.Magenta;
+Console.WriteLine("Tebrikler Sıcak Soğuk Oyununu " + tahminsayaci + " Tahminde 
+Kazandınız");
+}
